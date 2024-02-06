@@ -43,7 +43,7 @@ a {
     display: inline-block;
 }
 .btn {
-    background-color: brown;
+    background-color: var(--main-color);
     padding: 10px 40px;
     border-radius: 30px;
     border-top-right-radius: 0;
@@ -54,4 +54,8 @@ a {
     &:hover {
         border-top-right-radius: 30px;
     }
+    @media (max-width: 767px) {
+        padding: 5px 10px;
+        font-size: 10px;
+      }
 }

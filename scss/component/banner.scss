@@ -1,22 +1,28 @@
 .banner {
     position: relative;
-    margin-top: 40px;
+    margin-top: 140px;
     z-index: 1;
+    @media (max-width: 767px) {
+        text-align: center;
+      }
     &__title {
         font-size: 70px;
         color: white;
         text-transform: capitalize;
         & span {
-            color: brown;
+            color: var(--main-color);
         }
     }
     &__description {
-        color: #777;
+        color: var(--dsc-color);
         margin: 20px 0;
     }
 
     & .btn {
         margin: 40px 0 30px;
+        @media (max-width: 767px) {
+            padding: 10px 20px;
+        }
     }
 
 }

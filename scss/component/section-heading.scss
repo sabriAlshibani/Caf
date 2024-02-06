@@ -1,0 +1,56 @@
+.section-heading {
+  text-align: center;
+  & .title {
+    position: relative;
+    color: #fff;
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 40px;
+
+    & span {
+        background: none;
+      color: var(--main-color);
+      font-size: 40px;
+      font-weight: 600;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        width: 240px;
+        height: 2px;
+        background-color: #ccc;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -20px;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 3px;
+      background-color: #ccc;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -18px;
+  }
+    
+/*     &::after {
+      font-family: 'Font Awesome 5 Free';
+      content: 'mug-hot';
+      font-weight: 900;
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--main-color);
+    } */
+  }
+
+  & .description {
+    color: var(--dsc-color);
+    width: 400px;
+    margin:0 auto 100px ;
+    line-height: 2;
+  }
+}

@@ -1,0 +1,22 @@
+.banner {
+    position: relative;
+    margin-top: 40px;
+    z-index: 1;
+    &__title {
+        font-size: 70px;
+        color: white;
+        text-transform: capitalize;
+        & span {
+            color: brown;
+        }
+    }
+    &__description {
+        color: #777;
+        margin: 20px 0;
+    }
+
+    & .btn {
+        margin: 40px 0 30px;
+    }
+
+}

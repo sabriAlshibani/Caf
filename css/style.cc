@@ -210,63 +210,19 @@ header:before {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--bgr-color);
-  overflow: hidden;
 }
 .services__boxes {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  column-gap: 2%;
   color: red;
 }
 .services__boxes-serve {
-  text-align: center;
-  position: relative;
-}
-@media (min-width: 768px) {
-  .services__boxes-serve {
-    flex-basis: 45%;
-  }
-}
-@media (min-width: 992px) {
-  .services__boxes-serve {
-    flex-basis: 20%;
-  }
-}
-.services__boxes-serve:hover .services__boxes-serve-title {
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(163, 121, 6, 0.5);
-  bottom: 20px;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+  flex-basis: 20%;
+  height: 80px;
 }
 .services__boxes-serve img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-}
-.services__boxes-serve-title {
-  position: absolute;
-  bottom: -100%;
-  left: 0;
-  padding: 40px 0;
-  transition: 0.5s;
-  color: #ccc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.services__boxes-serve-title:hover {
-  top: 30px;
-}
-.services__boxes-serve-meal {
-  color: var(--main-color);
-  margin-top: 30px;
-  font-weight: 600;
-  display: inline-block;
 }
 
 * {
@@ -338,4 +294,4 @@ a {
   --dsc-color: #777;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.cc.map */

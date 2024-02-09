@@ -5,6 +5,7 @@
 
   &__cards {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 2px;
     color: black;
@@ -14,10 +15,26 @@
       padding: 20px;
       text-align: center;
       flex-basis: 20%;
-      background-color: white;
+      background-color: #29282E;
+      color: white;
+      @media (max-width: 767px) {
+      flex-basis: 90%;
+      margin: 20px;
+      border: 1px transparent solid;
+      transition: .5s;
+      &:hover {
+        border-color: rgb(95, 83, 51) ;
+        transform: scale(1.1, 1.1);
+      }
+
+      }
 
       &--active {
         transform: scale(1.2, 1.2);
+        @media (max-width: 767px) {
+          transform: scale(1,1);
+        }
+
       }
 
       &-title {

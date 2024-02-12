@@ -59,3 +59,17 @@ a {
         font-size: 10px;
       }
 }
+
+body {
+position: relative;
+animation: body 5s infinite;
+
+}
+
+
+@keyframes mymove {
+0%   {top: 0px;}
+25%  {top: 200px;}
+75%  {top: 50px}
+100% {top: 100px;}
+}

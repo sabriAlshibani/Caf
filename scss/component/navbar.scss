@@ -1,17 +1,40 @@
 .navbar {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: 98px;
+    position: relative;
+  }
+  & i {
+    color: white;
+    position: relative;
+    right: 10px;
+    order: 1;
+    font-size: 20px;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+
+    @media (max-width: 767px) {
+      &:hover .navbar__navigation {
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-color: var(--main-color);
+      }
+    }
 
   }
+
   &__logo {
     font-size: 30px;
     @media (max-width: 767px) {
-      font-size: 16px;
+      font-size: 20px;
     }
     text-decoration: none;
     display: inline-block;
@@ -22,13 +45,16 @@
     }
   }
 
-  &__navagations {
+  &__navigation {
     display: flex;
     @media (max-width: 767px) {
       display: none;
     }
+
     & li {
       margin: 30px 20px;
+      display: flex;
+      justify-content: end;
     }
     & a {
       padding: 10px 0;
@@ -37,7 +63,7 @@
       transition: 0.5s;
       position: relative;
       &:after {
-        content:"";
+        content: "";
         position: absolute;
         width: 0;
         height: 2px;
@@ -45,10 +71,9 @@
         left: 0;
         bottom: 0;
         transition: 0.5s;
-
-      }  
+      }
       .focus,
-      &:hover,    
+      &:hover,
       &:hover:after {
         width: 100%;
         color: var(--main-color);
@@ -62,4 +87,9 @@
     margin-right: 20px;
   }
 
+  &__btn {
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
 }

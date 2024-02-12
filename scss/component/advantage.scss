@@ -40,6 +40,9 @@
         width: 30px;
         background-color: var(--main-color);
         border-radius: 20px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+
         transition: .5s;
       }
 

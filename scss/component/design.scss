@@ -1,9 +1,28 @@
 .design {
     padding-top: var(--main-padding);
     padding-bottom: var(--main-padding);
+    background-color: var(--bgr-color);
+    color: white;
 
     .container {
-        
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+
+    &__article,
+    &__image {
+        width: 50%;
+        line-height: 2;
+    }
+
+    &__image {
+        width: 300px;
+        height: 300px;
+          & img {
+            width: 100%;
+            height: 100%;
+        }
     }
 
 }

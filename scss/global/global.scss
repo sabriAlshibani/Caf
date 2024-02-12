@@ -59,8 +59,11 @@ a {
         font-size: 10px;
       }
 }
-
 body {
+    overflow-x: hidden;
+}
+
+/* body {
 position: relative;
 animation: body 5s infinite;
 
@@ -72,4 +75,4 @@ animation: body 5s infinite;
 25%  {top: 200px;}
 75%  {top: 50px}
 100% {top: 100px;}
-}
+} */

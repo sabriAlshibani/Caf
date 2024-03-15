@@ -1,13 +1,13 @@
 .services {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
   background-color: var(--bgr-color);
 
   &__cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2px;
+    gap: 20px;
     color: black;
 
     &-card {
@@ -16,6 +16,11 @@
       flex-basis: 20%;
       background-color: #29282E;
       color: white;
+      transition: .5s;
+
+      &:hover {
+      border: 1px var(--trt-color) solid;
+      }
       @media (max-width: 767px) {
       flex-basis: 90%;
       margin: 20px;
@@ -29,7 +34,7 @@
       }
 
       &--active {
-        transform: scale(1.2, 1.2);
+        transform: scale(1.1, 1.1);
         @media (max-width: 767px) {
           transform: scale(1,1);
         }

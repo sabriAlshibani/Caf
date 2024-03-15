@@ -1,5 +1,5 @@
 .advantage {
-  padding-top: 60px;
+  padding-top: var(--main-padding);
   padding-bottom: 60px;
   background-color: var(--bgr-color);
 
@@ -48,7 +48,7 @@
 
       &:hover::before {
         width: 100%;
-      border-top-right-radius: 0;
+      border-bottom-right-radius: 30px;
       }
 
       & p,

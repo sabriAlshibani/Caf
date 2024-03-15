@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .navbar {
   position: relative;
   width: 100%;
@@ -92,13 +93,12 @@
 
 .banner {
   position: relative;
-  margin-top: 140px;
   z-index: 1;
+  top: 20%;
 }
 @media (max-width: 767px) {
   .banner {
     text-align: center;
-    margin-top: 70px;
   }
 }
 .banner__title {
@@ -123,6 +123,7 @@
 }
 
 header {
+  position: relative;
   width: 100%;
   height: 100vh;
   background-image: url(../images/tea.png);
@@ -144,7 +145,7 @@ header:before {
 .section-heading .title {
   position: relative;
   color: #fff;
-  font-size: 40px;
+  font-size: 70px;
   font-weight: 800;
   margin-bottom: 40px;
   /*     &::after {
@@ -197,8 +198,8 @@ header:before {
 }
 
 .portfolio {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
   background-color: var(--bgr-color);
 }
 .portfolio__cards {
@@ -242,15 +243,15 @@ header:before {
 }
 
 .services {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
   background-color: var(--bgr-color);
 }
 .services__cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2px;
+  gap: 20px;
   color: black;
 }
 .services__cards-card {
@@ -259,6 +260,10 @@ header:before {
   flex-basis: 20%;
   background-color: #29282E;
   color: white;
+  transition: 0.5s;
+}
+.services__cards-card:hover {
+  border: 1px var(--trt-color) solid;
 }
 @media (max-width: 767px) {
   .services__cards-card {
@@ -273,7 +278,7 @@ header:before {
   }
 }
 .services__cards-card--active {
-  transform: scale(1.2, 1.2);
+  transform: scale(1.1, 1.1);
 }
 @media (max-width: 767px) {
   .services__cards-card--active {
@@ -406,7 +411,7 @@ header:before {
 }
 
 .advantage {
-  padding-top: 60px;
+  padding-top: var(--main-padding);
   padding-bottom: 60px;
   background-color: var(--bgr-color);
 }
@@ -452,7 +457,7 @@ header:before {
 }
 .advantage__people-say:hover::before {
   width: 100%;
-  border-top-right-radius: 0;
+  border-bottom-right-radius: 30px;
 }
 .advantage__people-say p, .advantage__people-say span {
   position: relative;
@@ -497,28 +502,48 @@ header:before {
   width: 100%;
 }
 
-.design {
+.about {
   padding-top: var(--main-padding);
   padding-bottom: var(--main-padding);
   background-color: var(--bgr-color);
   color: white;
+  overflow: hidden;
 }
-.design .container {
+.about .container {
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
 }
-.design__article, .design__image {
+@media (max-width: 767px) {
+  .about .container {
+    flex-direction: column;
+  }
+}
+.about__article, .about__image {
   width: 50%;
   line-height: 2;
 }
-.design__image {
-  width: 300px;
-  height: 300px;
+@media (max-width: 767px) {
+  .about__article, .about__image {
+    width: 100%;
+  }
 }
-.design__image img {
-  width: 100%;
-  height: 100%;
+.about__article {
+  text-align: center;
+  color: var(--dsc-color);
+}
+.about__image {
+  position: relative;
+}
+@media (max-width: 767px) {
+  .about__image {
+    margin-bottom: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.about__image img {
+  width: 300px;
+  height: 200px;
 }
 
 * {
@@ -527,13 +552,32 @@ header:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  behavior: smooth;
 }
 
 body {
   font-family: "Josefin Sans", sans-serif;
   font-family: "Open Sans", sans-serif;
+  /* تحديد الخلفية باستخدام تدرج لوني خطي */
+  background: linear-gradient(90deg, #120E12, #612408, #24243e, #6C4E43);
+  background-size: 400% 400%;
+  animation: moveGradient 15s ease infinite;
+  /* يضمن تغطية الخلفية للصفحة بالكامل */
+  min-height: 100vh;
+  margin: 0;
 }
 
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -604,9 +648,8 @@ animation: body 5s infinite;
 :root {
   --main-color: brown;
   --trt-color: rgba(165, 42, 42, 0.705);
-  --bgr-color: #0B0B0F;
   --dsc-color: #777;
-  --main-padding: 60px;
+  --main-padding: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

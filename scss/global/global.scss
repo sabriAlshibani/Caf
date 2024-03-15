@@ -4,11 +4,32 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  behavior: smooth;
 }
 
 body {
     font-family: 'Josefin Sans', sans-serif;
     font-family: 'Open Sans', sans-serif;
+        /* تحديد الخلفية باستخدام تدرج لوني خطي */
+        background: linear-gradient(90deg,#120E12, #612408, #24243e, #6C4E43);
+        background-size: 400% 400%;
+        animation: moveGradient 15s ease infinite;
+        
+        /* يضمن تغطية الخلفية للصفحة بالكامل */
+        min-height: 100vh;
+        margin: 0;
+    
+}
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .container {
